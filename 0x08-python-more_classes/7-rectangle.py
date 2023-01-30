@@ -19,7 +19,7 @@ class Rectangle:
         """
         self.width = width
         self.height = height
-        Rectangle.number_of_instance += 1
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -75,7 +75,7 @@ class Rectangle:
                 try:
                     Rectangle += str(self.print_symbol)
                 except Exception:
-                    Rectangle += type(self).print_symbol
+                    Rectangle += type((self).print_symbol)
             if i < self.__height - 1:
                 Rectangle += "\n"
         return Rectangle
@@ -87,4 +87,4 @@ class Rectangle:
         """Deletes an instance of the rectangle"""
 
         print("Bye rectangle...")
-        Rectangle.number_of_instance -= 1
+        Rectangle.number_of_instances -= 1
