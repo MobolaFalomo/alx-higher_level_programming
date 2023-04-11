@@ -4,5 +4,5 @@
 const arg1 = process.argv[2];
 const arg2 = process.argv[3];
 
-//Use template literals to print the arguments
+//  Use template literals to print the arguments
 console.log(`${arg1} is ${arg2}`);
