@@ -6,5 +6,8 @@ import urllib.request
 import sys
 
 if __name__ == "__main__":
-    with urllib.request.urlopen("https://alx-intranet.hbtn.io") as response:
-        print(response.headers.get("X-Request-Id"))
+    url = sys.argv[1]
+    R = urllib.request.Request(url)
+    with urllib.request.urlopen(R) as response:
+        R_id = response.headers.get("X-Request-Id")
+        print(R_id)
