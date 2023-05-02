@@ -11,8 +11,10 @@ import sys
 
 # from urllib.error import HTTPError
 if __name__ == "__main__":
+    data = sys.argv[1]
+    req = urllib.request.Request(data)
     try:
-        with urllib.request.urlopen(sys.argv[1]) as response:
+        with urllib.request.urlopen(data) as response:
             print(response.read().decode("utf-8"))
     except urllib.error.HTTPError as e:
         print(f"Error code: {e.code}")
